@@ -1,31 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifetour</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifetour</title>
+  <link rel="preload" href="fonts/montserrat-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" width="410" height="400" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="header">header</div>
-    <div data-test="hero">hero</div>
-    <div data-test="tours">tours</div>
-    <div data-test="training">training</div>
-    <div data-test="about">about</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="adv">adv</div>
-    <div data-test="gallery">gallery</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+<body>
+  <div class="page-body">
+    <header class="page-header">
+      <div class="page-header__container" data-test="header">
+        <!-- Левый блок - меню -->
+        <div class="page-header__left">
+          <button class="page-header__menu-toggle" type="button" aria-label="Открыть меню">
+            <svg class="page-header__menu-icon" width="26" height="26">
+              <use href="/__spritemap#sprite-menu"></use>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Правый блок - логотип и телефон -->
+        <div class="page-header__right">
+          <div class="page-header__logo-wrapper">
+            <svg class="page-header__logo" width="142" height="42">
+              <use href="/__spritemap#sprite-logo"></use>
+            </svg>
+          </div>
+          <a href="tel:88000000000" class="page-header__phone">8 800 000-00-00</a>
+        </div>
+
+        <!-- Навигация для десктопа -->
+        <nav class="page-header__nav">
+          <ul class="page-header__nav-list">
+            <li class="page-header__nav-item"><a href="#tours" class="page-header__nav-link">Туры</a></li>
+            <li class="page-header__nav-item"><a href="#training" class="page-header__nav-link">Обучение</a></li>
+            <li class="page-header__nav-item"><a href="#about" class="page-header__nav-link">О нас</a></li>
+            <li class="page-header__nav-item"><a href="#reviews" class="page-header__nav-link">Отзывы</a></li>
+            <li class="page-header__nav-item"><a href="#gallery" class="page-header__nav-link">Фотографии</a></li>
+            <li class="page-header__nav-item"><a href="#contacts" class="page-header__nav-link">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" data-test="hero">
+        <div class="hero__container">
+          <div class="hero__slider swiper">
+            <div class="hero__wrapper swiper-wrapper">
+              <!-- Слайд 1 -->
+              <div class="hero__slide swiper-slide">
+                <div class="hero__image">
+                  <picture>
+                    <!-- Только @2x версии -->
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="../img/images-hero/hero-slide-1@2x.webp">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="../img/images-hero/hero-slide-1@2x.webp">
+                    <source type="image/webp" srcset="../img/images-hero/hero-slide-1@2x.webp">
+                    <source media="(min-width: 1440px)" srcset="../img/images-hero/hero-slide-1@2x.jpg">
+                    <source media="(min-width: 768px)" srcset="../img/images-hero/hero-slide-1@2x.jpg">
+                    <img class="hero__img" src="../img/images-hero/hero-slide-1@2x.jpg" width="320" height="400" alt="Захватывающие вершины Кавказа">
+                  </picture>
+                </div>
+                <div class="hero__content">
+                  <h2 class="hero__title">Захватывающие вершины Кавказа</h2>
+                  <p class="hero__description">
+                    В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.
+                  </p>
+                  <button class="hero__button" type="button">Смотреть тур</button>
+                </div>
+              </div>
+
+              <!-- Слайд 2 -->
+              <div class="hero__slide swiper-slide">
+                <div class="hero__image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/images/images-hero/hero-2-desktop@1x.webp 1x, img/images/images-hero/hero-2-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/images/images-hero/hero-2-tablet@1x.webp 1x, img/images/images-hero/hero-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/images/images-hero/hero-2-mobile@1x.webp 1x, img/images/images-hero/hero-2-mobile@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/images/images-hero/hero-2-desktop@1x.jpg 1x, img/images/images-hero/hero-2-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/images/images-hero/hero-2-tablet@1x.jpg 1x, img/images/images-hero/hero-2-tablet@2x.jpg 2x">
+                    <img class="hero__img" src="img/images/images-hero/hero-2-mobile@1x.jpg" srcset="img/images/images-hero/hero-2-mobile@2x.jpg 2x" width="320" height="400" alt="Второй слайд">
+                  </picture>
+                </div>
+                <div class="hero__content">
+                  <h2 class="hero__title">Второй слайд</h2>
+                  <p class="hero__description">
+                    Описание второго слайда с интересным контентом
+                  </p>
+                  <button class="hero__button" type="button">Смотреть тур</button>
+                </div>
+              </div>
+
+              <!-- Слайд 3 -->
+              <div class="hero__slide swiper-slide">
+                <div class="hero__image">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/images/images-hero/hero-3-desktop@1x.webp 1x, img/images/images-hero/hero-3-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/images/images-hero/hero-3-tablet@1x.webp 1x, img/images/images-hero/hero-3-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/images/images-hero/hero-3-mobile@1x.webp 1x, img/images/images-hero/hero-3-mobile@2x.webp 2x">
+                    <source media="(min-width: 1440px)" srcset="img/images/images-hero/hero-3-desktop@1x.jpg 1x, img/images/images-hero/hero-3-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/images/images-hero/hero-3-tablet@1x.jpg 1x, img/images/images-hero/hero-3-tablet@2x.jpg 2x">
+                    <img class="hero__img" src="img/images/images-hero/hero-3-mobile@1x.jpg" srcset="img/images/images-hero/hero-3-mobile@2x.jpg 2x" width="320" height="400" alt="Третий слайд">
+                  </picture>
+                </div>
+                <div class="hero__content">
+                  <h2 class="hero__title">Третий слайд</h2>
+                  <p class="hero__description">
+                    Описание третьего слайда с захватывающим приключением
+                  </p>
+                  <button class="hero__button" type="button">Смотреть тур</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Пагинация -->
+            <div class="hero__pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div data-test="tours">tours</div>
+      <div data-test="training">training</div>
+      <div data-test="about">about</div>
+      <div data-test="reviews">reviews</div>
+      <div data-test="adv">adv</div>
+      <div data-test="gallery">gallery</div>
+      <div data-test="form">form</div>
+    </main>
+
+    <footer>
+      <div data-test="footer">footer</div>
+    </footer>
+
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>

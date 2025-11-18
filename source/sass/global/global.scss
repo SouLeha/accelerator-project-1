@@ -1,0 +1,42 @@
+// Базовые стили
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  font-family: $primary-font;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.page-body {
+  font-family: $primary-font;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+main {
+  margin: 0 auto;
+}

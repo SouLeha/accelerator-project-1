@@ -1,0 +1,151 @@
+.page-header {
+  background-color: $accent;
+  width: 100%;
+
+  &__container {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 60px;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      width: 768px;
+      padding: 0 30px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1440px;
+      padding: 0 40px;
+      justify-content: space-between;
+    }
+  }
+
+  // Левый блок (меню)
+  &__left {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 15px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 0;
+      align-items: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  // Кнопка меню
+  &__menu-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &__menu-icon {
+    color: $white;
+    display: block;
+  }
+
+  // Правый блок (лого + телефон)
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding-top: 15px;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      align-items: center;
+      padding-top: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $desktop-width) {
+      position: static;
+      transform: none;
+      flex-direction: row;
+    }
+  }
+
+  // Логотип
+  &__logo-wrapper {
+    margin-bottom: 14px; // отступ между лого и телефоном
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+      margin-right: 20px; // отступ между лого и телефоном на планшете
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    color: $white;
+    cursor: pointer;
+    display: block;
+  }
+
+  // Телефон
+  &__phone {
+    color: $white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // Навигация (десктоп)
+  &__nav {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+  }
+
+  &__nav-item {
+    // стили для пунктов меню
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
