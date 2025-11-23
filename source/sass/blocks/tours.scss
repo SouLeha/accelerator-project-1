@@ -1,0 +1,198 @@
+.tours__title {
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  margin-top: 36px;
+  margin-bottom: 42px;
+  padding-left: 15px;
+}
+
+.tours__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.tours__item {
+  /* Карточка будет адаптивной по высоте */
+}
+
+.tours__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgb(0, 0, 0, 0.1);
+
+  /* Фоновая картинка */
+  background-image: url("/img/images-tours/tours-card-1-mobile@2x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 300px;
+  height: 416px;
+
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.tours__card-header {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.tours__card-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background-color: #ffffff;
+  opacity: 0.2;
+}
+
+.tours__region-marker {
+  display: inline-flex;
+  align-items: center;
+  background: $accent;
+  color: $white;
+  padding: 8px 12px 8px 34px;
+  position: relative;
+}
+
+/* Иконка маркера для региона */
+.tours__region-marker::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-image: url("/__spritemap#sprite-pin_filled-view");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+.tours__card-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.tours__duration {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.tours__days,
+.tours__nights {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Иконка солнца для дней */
+.tours__days::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask: url("/__spritemap#sprite-sun-view");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  flex-shrink: 0;
+}
+
+/* Иконка луны для ночей */
+.tours__nights::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-color: currentColor;
+  mask-image: url("/__spritemap#sprite-moon-view");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  flex-shrink: 0;
+}
+
+.tours__meta {
+  display: flex;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.tours__difficulty {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.tours__stars {
+  display: flex;
+  gap: 4px;
+}
+
+/* Стили для звезд */
+.tours__star {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+.tours__star--filled::before {
+  content: "★";
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.tours__star--empty::before {
+  content: "☆";
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.tours__info {
+  display: flex;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+  gap: 8px;
+}
+
+.tours__dates,
+.tours__group {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tours__dates span,
+.tours__group span {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: 7px;
+}

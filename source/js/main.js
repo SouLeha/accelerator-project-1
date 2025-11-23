@@ -4,7 +4,7 @@
 // import 'swiper/css';
 // Базовая инициализация Swiper
 import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -16,15 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (heroSlider) {
     new Swiper(heroSlider, {
-      modules: [Navigation, Pagination, Autoplay],
+      modules: [Navigation, Pagination],
       loop: true,
       pagination: {
         el: '.hero__pagination',
         clickable: true,
       },
-      autoplay: {
-        delay: 5000,
-      },
+
     });
   }
 });
