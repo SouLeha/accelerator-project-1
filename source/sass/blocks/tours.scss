@@ -3,8 +3,11 @@
   padding: 0;
   text-align: start;
   margin-top: 36px;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   padding-left: 15px;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
 }
 
 .tours__list {
@@ -12,21 +15,25 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 20px;
 }
 
 .tours__item {
-  /* Карточка будет адаптивной по высоте */
+  margin: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-width: 29px;
 }
 
 .tours__card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+
+  // justify-content: end;
   background: #ffffff;
-  padding: 20px;
+  padding: 224px 0 30px 20px;
   box-shadow: 0 4px 15px rgb(0, 0, 0, 0.1);
 
   /* Фоновая картинка */
@@ -34,7 +41,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-width: 300px;
+  min-width: 290px;
   height: 416px;
 
   color: #ffffff;
@@ -45,7 +52,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
-  margin-top: 20px;
   padding-bottom: 15px;
   position: relative;
 }
@@ -96,7 +102,7 @@
 .tours__duration {
   margin-bottom: 15px;
   display: flex;
-  gap: 15px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -144,7 +150,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 10px;
+  margin: 0;
   font-weight: 300;
   font-size: 12px;
   line-height: 12px;
@@ -152,7 +158,7 @@
 
 .tours__stars {
   display: flex;
-  gap: 4px;
+  margin-top: 4px;
 }
 
 /* Стили для звезд */
