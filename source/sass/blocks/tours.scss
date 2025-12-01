@@ -1,13 +1,80 @@
+
+.tours__nav {
+  display: none;
+
+  @media (width >= 768px) {
+    display: block;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    pointer-events: none;
+  }
+}
+
+.tours__button-prev,
+.tours__button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 37px;
+  height: 35px;
+  background: $accent;
+  border: none;
+  box-shadow: 0 2px 10px rgb(0, 0, 0, 0.1);
+  cursor: pointer;
+  pointer-events: auto;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: #000000;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background: #f5f5f5;
+  }
+
+  .tours.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.tours__button-prev {
+  left: 10px;
+
+  &::after {
+    mask-image: url("/__spritemap#sprite-arrow-left-view");
+  }
+}
+
+.tours__button-next {
+  right: 10px;
+
+  &::after {
+    mask-image: url("/__spritemap#sprite-arrow-right-view");
+  }
+}
+
 .tours__title {
   margin: 0;
   padding: 0;
   text-align: start;
   margin-top: 36px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   padding-left: 15px;
   font-weight: 800;
   font-size: 22px;
-  line-height: 22px;
+  line-height: 26px;
 }
 
 .tours__list {
@@ -121,27 +188,19 @@
 .tours__duration {
   margin-bottom: 15px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-}
-
-.tours__duration-second,
-.tours__duration-third {
-  display: block;
+  row-gap: 12px;
 }
 
 
 .tours__time {
-  margin-top: 12px;
+  display: flex;
   align-items: center;
 }
 
 .tours__time > span:last-child {
   margin-left: 15px;
-}
-
-
-.tours__time-fourth {
-  margin-top: 0;
 }
 
 .tours__time-fourth > span:last-child {
@@ -188,7 +247,7 @@
 
 .tours__meta {
   display: flex;
-  gap: 8px;
+  justify-content: space-between;
   padding-top: 15px;
 }
 
@@ -210,7 +269,8 @@
 
 .tours__stars {
   display: flex;
-  margin-top: 8px;
+  align-items: end;
+  margin-top: 4px;
 }
 
 /* Стили для звезд */
@@ -218,6 +278,7 @@
   width: 17px;
   height: 16px;
   position: relative;
+  bottom: -2px;
 }
 
 .tours__star--filled::before {
@@ -234,6 +295,7 @@
 
 .tours__info {
   display: flex;
+  align-items: end;
   font-weight: 300;
   font-size: 12px;
   line-height: 12px;
@@ -243,7 +305,6 @@
 .tours__dates,
 .tours__group {
   display: block;
-  margin-bottom: 5px;
 }
 
 .tours__dates span,

@@ -124,40 +124,40 @@
         </div>
       </section>
       <section class="tours">
-        <div class="tours__container" data-test="tours">
+        <div class="tours__container tours__slider swiper" data-test="tours">
           <h2 class="tours__title">Ближайшие туры</h2>
 
-          <ul class="tours__list">
+          <div class="tours__nav">
+            <button class="tours__button-prev swiper-button-prev" aria-label="Предыдущий слайд"></button>
+            <button class="tours__button-next swiper-button-next" aria-label="Следующий слайд"></button>
+          </div>
 
-            <li class="tours__item">
+          <ul class="tours__list tours__wrapper swiper-wrapper">
+            <li class="tours__item tours__slide swiper-slide">
               <div class="tours__card tours__card-first">
-                <!-- Заголовок и маркер региона -->
                 <div class="tours__card-header">
-
                   <div class="tours__duration">
                     <span class="tours__region-marker">Кавказ</span>
-                    <span class="tours__days">4 дня</span>
-                    <span class="tours__nights">3 ночи</span>
+                    <div class="tours__time">
+                      <span class="tours__days">4 дня</span>
+                      <span class="tours__nights">3 ночи</span>
+                    </div>
                   </div>
                   <h3 class="tours__card-title">Путешествие вокруг Эльбруса</h3>
                 </div>
 
-                <!-- Блок со сложностью (звезды) -->
                 <div class="tours__meta">
                   <div class="tours__difficulty">
                     <span class="tours__difficulty-label">Сложность:</span>
                     <div class="tours__stars" aria-label="Рейтинг сложности 4 из 5 звезд">
-                      <!-- 4 заполненные звезды -->
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
-                      <!-- 1 пустая звезда -->
                       <span class="tours__star tours__star--empty"></span>
                     </div>
                   </div>
 
-                  <!-- Блок с датами и размером группы -->
                   <div class="tours__info">
                     <div class="tours__dates">Даты набора:
                       <span>12.06-19.06</span>
@@ -170,12 +170,10 @@
               </div>
             </li>
 
-            <li class="tours__item">
+            <li class="tours__item tours__slide swiper-slide">
               <div class="tours__card tours__card-second">
-                <!-- Заголовок и маркер региона -->
                 <div class="tours__card-header">
-
-                  <div class="tours__duration tours__duration-second">
+                  <div class="tours__duration">
                     <span class="tours__region-marker">Алтай</span>
                     <div class="tours__time">
                       <span class="tours__days">14 дней</span>
@@ -185,22 +183,18 @@
                   <h3 class="tours__card-title">Путь к подножию Белухи</h3>
                 </div>
 
-                <!-- Блок со сложностью (звезды) -->
-                <div class="tours__meta tours__meta-second">
+                <div class="tours__meta">
                   <div class="tours__difficulty">
                     <span class="tours__difficulty-label">Сложность:</span>
                     <div class="tours__stars" aria-label="Рейтинг сложности 4 из 5 звезд">
-                      <!-- 4 заполненные звезды -->
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
-                      <!-- 1 пустая звезда -->
                       <span class="tours__star tours__star--empty"></span>
                     </div>
                   </div>
 
-                  <!-- Блок с датами и размером группы -->
                   <div class="tours__info">
                     <div class="tours__dates">Даты набора:
                       <span>14.06-23.06</span>
@@ -213,12 +207,10 @@
               </div>
             </li>
 
-            <li class="tours__item">
+            <li class="tours__item tours__slide swiper-slide">
               <div class="tours__card tours__card-third">
-                <!-- Заголовок и маркер региона -->
                 <div class="tours__card-header">
-
-                  <div class="tours__duration tours__duration-third">
+                  <div class="tours__duration">
                     <span class="tours__region-marker">Адыгея</span>
                     <div class="tours__time">
                       <span class="tours__days">7 дней</span>
@@ -228,22 +220,18 @@
                   <h3 class="tours__card-title">Через Фишт к Чёрному морю и обратно</h3>
                 </div>
 
-                <!-- Блок со сложностью (звезды) -->
-                <div class="tours__meta tours__meta-third">
+                <div class="tours__meta">
                   <div class="tours__difficulty">
                     <span class="tours__difficulty-label">Сложность:</span>
                     <div class="tours__stars" aria-label="Рейтинг сложности 4 из 5 звезд">
-                      <!-- 4 заполненные звезды -->
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
-                      <!-- 1 пустая звезда -->
                       <span class="tours__star tours__star--empty"></span>
                     </div>
                   </div>
 
-                  <!-- Блок с датами и размером группы -->
                   <div class="tours__info">
                     <div class="tours__dates">Даты набора:
                       <span>15.07-19.07</span>
@@ -256,14 +244,12 @@
               </div>
             </li>
 
-            <li class="tours__item">
+            <li class="tours__item tours__slide swiper-slide">
               <div class="tours__card tours__card-fourth">
-                <!-- Заголовок и маркер региона -->
                 <div class="tours__card-header">
-
-                  <div class="tours__duration tours__duration-fourth">
+                  <div class="tours__duration">
                     <span class="tours__region-marker">Урал</span>
-                    <div class="tours__time tours__time-fourth">
+                    <div class="tours__time">
                       <span class="tours__days">9 дней</span>
                       <span class="tours__nights">10 ночей</span>
                     </div>
@@ -271,22 +257,18 @@
                   <h3 class="tours__card-title">Восхождение Манарага</h3>
                 </div>
 
-                <!-- Блок со сложностью (звезды) -->
-                <div class="tours__meta tours__meta-fourth">
+                <div class="tours__meta">
                   <div class="tours__difficulty">
                     <span class="tours__difficulty-label">Сложность:</span>
                     <div class="tours__stars" aria-label="Рейтинг сложности 5 из 5 звезд">
-                      <!-- 4 заполненные звезды -->
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
                       <span class="tours__star tours__star--filled"></span>
-
                     </div>
                   </div>
 
-                  <!-- Блок с датами и размером группы -->
                   <div class="tours__info">
                     <div class="tours__dates">Даты набора:
                       <span>12.07-19.07</span>
@@ -298,7 +280,6 @@
                 </div>
               </div>
             </li>
-
           </ul>
           <a class="tours__link-all" href="#">Показать все туры</a>
         </div>

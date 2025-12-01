@@ -25,4 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
   }
+
+  const toursSlider = document.querySelector('.tours__slider');
+
+  if (toursSlider) {
+    new Swiper(toursSlider, {
+      modules: [Navigation],
+      loop: true,
+      pagination: false,
+
+    });
+  }
 });
