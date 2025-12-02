@@ -1,0 +1,86 @@
+.training {
+  display: block;
+  margin: 0 auto;
+  margin-top: 18px;
+  color: $primary;
+}
+
+.training__container {
+  margin: 0 15px;
+}
+
+.training__container-shadow {
+  position: relative;
+  display: inline-block;
+}
+
+.training__title {
+  position: relative;
+  z-index: 1;
+  text-align: start;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.training__container-shadow::before {
+  content: "Обучение";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0.03;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.training__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 18px;
+}
+
+.training__wrapper {
+  margin-top: 25px;
+}
+
+.training__wrapper-title {
+  margin: 0;
+  padding: 0;
+}
+
+.training__wrapper-list {
+  margin: 0;
+  padding: 0;
+  margin-top: 25px;
+  list-style: none;
+}
+
+.training__wrapper-item {
+  margin: 0;
+  border: 1px solid #0266c11a;
+}
+
+.training__instructor-card {
+  padding: 15px;
+}
+
+.training__instructor-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.training__instructor-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+}

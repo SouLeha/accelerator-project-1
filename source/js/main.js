@@ -36,10 +36,9 @@ if (toursSlider) {
 
     slidesPerView: '1',
     centeredSlides: true,
-    spaceBetween: '15',
     loop: false,
     pagination: false,
 
   });
 
-  };
+}
