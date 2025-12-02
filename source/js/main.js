@@ -4,7 +4,7 @@
 // import 'swiper/css';
 // Базовая инициализация Swiper
 import Swiper from 'swiper';
-import { Navigation, Pagination} from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -25,15 +25,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
   }
-
-  const toursSlider = document.querySelector('.tours__slider');
-
-  if (toursSlider) {
-    new Swiper(toursSlider, {
-      modules: [Navigation],
-      loop: true,
-      pagination: false,
-
-    });
-  }
 });
+
+
+const toursSlider = document.querySelector('.tours__slider-wrapper');
+
+if (toursSlider) {
+  new Swiper(toursSlider, {
+    modules: [Navigation],
+
+    slidesPerView: '1',
+    centeredSlides: true,
+    spaceBetween: '15',
+    loop: false,
+    pagination: false,
+
+  });
+
+  };
