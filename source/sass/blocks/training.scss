@@ -6,7 +6,7 @@
 
 .training__container {
   margin: 0 15px;
-  margin-top: 18px;
+  margin-top: 20px;
   margin-bottom: 25px;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .training__wrapper {
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .training__wrapper-title {
@@ -62,60 +62,79 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-top: 25px;
+  margin-top: 22px;
   list-style: none;
 }
 
 .training__wrapper-item:not(:nth-child(3)) {
-    @media (max-width: 768px) {
-      display: none;
+  @media (width <= 768px) {
+    display: none;
   }
 }
 
 .training__wrapper-item {
   margin: 0;
-  border: 1px solid #0266c11a;
+  border: 1px solid rgba($primary, 0.1);
 }
 
 .training__instructor-card {
   padding: 15px;
 }
 
+.training__instructor-card img {
+  margin: 0;
+  padding: 0;
+  width: 260px;
+  height: 200px;
+  object-fit: cover;
+}
+
 .training__instructor-name {
-  display: inline-flex;
-  align-items: start;
+  display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   min-width: 260px;
   margin: 0;
-  margin-top: 15px;
-  position: relative;
-  padding-right: 30px; 
+  margin-top: 16px;
 }
 
 .training__instructor-name span {
   flex-grow: 1;
 }
 
-.training__instructor-name::before {
+.training__instructor-social {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+
+  border: 1px solid rgba($primary, 0.3);
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    outline: 1px solid $primary;
+    outline-offset: 1px;
+    opacity: 1;
+  }
+}
+
+.training__instructor-social::after {
   content: "";
   position: absolute;
   right: 0;
-  top: 0;
-  width: 24px;
-  height: 24px;
-  border: 1px solid $primary;
-  opacity: 0.3;
-  flex-shrink: 0;
-}
+  top: -1px;
 
-.training__instructor-name::after {
-  content: "";
-   position: absolute;
-  right: 0;
-  top: 0;
   width: 24px;
   height: 24px;
   display: flex;
@@ -123,13 +142,9 @@
   justify-content: center;
 
   background-color: $primary;
-
   mask: url("/__spritemap#sprite-vk-view") no-repeat center;
-  -webkit-mask: url("/__spritemap#sprite-vk-view") no-repeat center;
   mask-size: 14px 8px;
-  -webkit-mask-size: 14px 8px;
   flex-shrink: 0;
-
 }
 
 .training__instructor-description {
@@ -141,6 +156,26 @@
 }
 
 // ---------------- Процесс обучения--------------
+
+.training__process {
+  position: relative;
+}
+
+.training__process-line {
+  position: relative;
+  display: block;
+}
+
+.training__process-line::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 6px;
+  background-color: $accent;
+  width: 2px;
+  height: 184px;
+  margin: 0;
+}
 
 .training__process-title {
   font-weight: 700;
@@ -156,13 +191,70 @@
   padding: 0;
 }
 
+.training__process-item {
+  position: relative;
+}
+
+.training__process-item::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: $accent;
+  border-radius: 50%;
+  z-index: 2;
+}
+
 .training__item-description {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   margin: 0;
-  margin-top: 25px;
+  margin-top: 24px;
   padding: 0;
   padding-left: 63px;
   padding-right: 30px;
+  position: relative;
+}
+
+.training__item-content {
+  position: relative;
+  display: block;
+}
+
+.training__item-description::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 1px;
+
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $primary;
+  mask-size: 25px 25px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  flex-shrink: 0;
+}
+
+.training__description-first::before {
+  mask: url("/__spritemap#sprite-map-view");
+}
+
+.training__description-second::before {
+  mask: url("/__spritemap#sprite-boots-view");
+}
+
+.training__description-third::before {
+  mask: url("/__spritemap#sprite-pine-tree-view");
+}
+
+.training__description-fours::before {
+  mask: url("/__spritemap#sprite-mountain-view");
 }
