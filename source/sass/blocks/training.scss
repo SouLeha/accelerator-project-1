@@ -1,12 +1,13 @@
 .training {
   display: block;
   margin: 0 auto;
-  margin-top: 18px;
   color: $primary;
 }
 
 .training__container {
   margin: 0 15px;
+  margin-top: 18px;
+  margin-bottom: 25px;
 }
 
 .training__container-shadow {
@@ -57,10 +58,18 @@
 }
 
 .training__wrapper-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-top: 25px;
   list-style: none;
+}
+
+.training__wrapper-item:not(:nth-child(3)) {
+    @media (max-width: 768px) {
+      display: none;
+  }
 }
 
 .training__wrapper-item {
@@ -73,9 +82,54 @@
 }
 
 .training__instructor-name {
+  display: inline-flex;
+  align-items: start;
+  justify-content: space-between;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  min-width: 260px;
+  margin: 0;
+  margin-top: 15px;
+  position: relative;
+  padding-right: 30px; 
+}
+
+.training__instructor-name span {
+  flex-grow: 1;
+}
+
+.training__instructor-name::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $primary;
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.training__instructor-name::after {
+  content: "";
+   position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $primary;
+
+  mask: url("/__spritemap#sprite-vk-view") no-repeat center;
+  -webkit-mask: url("/__spritemap#sprite-vk-view") no-repeat center;
+  mask-size: 14px 8px;
+  -webkit-mask-size: 14px 8px;
+  flex-shrink: 0;
+
 }
 
 .training__instructor-description {
@@ -83,4 +137,32 @@
   font-size: 12px;
   line-height: 16px;
   margin: 0;
+  margin-top: 15px;
+}
+
+// ---------------- Процесс обучения--------------
+
+.training__process-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0;
+  padding-top: 25px;
+}
+
+.training__process-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.training__item-description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 0;
+  margin-top: 25px;
+  padding: 0;
+  padding-left: 63px;
+  padding-right: 30px;
 }
