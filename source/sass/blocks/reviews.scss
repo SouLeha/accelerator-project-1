@@ -1,0 +1,110 @@
+.reviews {
+  display: block;
+  margin: 0 auto;
+  color: $primary;
+  padding-bottom: 20px;
+}
+
+.reviews__container {
+  margin: 0 15px;
+  padding-top: 32px;
+}
+
+.reviews__title {
+  position: relative;
+  z-index: 1;
+  text-align: start;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+
+}
+
+.reviews__container-shadow {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+
+.reviews__container-shadow::before {
+  content: "Отзывы";
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 26px;
+  top: -14px;
+  left: 0;
+}
+
+/* Основной контейнер Swiper */
+.reviews__slider {
+  width: 100%;
+  margin-top: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Контейнер для слайдов */
+.reviews__wrapper-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__wrapper-item {
+  flex-shrink: 0;
+  width: 290px;
+  height: auto;
+  margin: 0;
+  border: 1px solid rgba($primary, 0.1);
+}
+
+.reviews__card {
+  padding: 20px;
+  width: 290px;
+  box-sizing: border-box;
+}
+
+.reviews__image img {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: 169px;
+  object-fit: cover;
+  display: block;
+}
+
+.reviews__wrapper-description {
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.reviews__wrapper-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+  margin-top: 15px;
+  width: 250px;
+}
+
+.reviews__wrapper-title span {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 12px;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+}

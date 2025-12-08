@@ -81,11 +81,11 @@
 
   // Логотип
   &__logo-wrapper {
-    margin-bottom: 14px; // отступ между лого и телефоном
+    margin-bottom: 14px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
-      margin-right: 20px; // отступ между лого и телефоном на планшете
+      margin-right: 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -99,7 +99,7 @@
     display: block;
   }
 
-  // Телефон
+
   &__phone {
     color: $white;
     text-decoration: none;
@@ -117,7 +117,7 @@
     }
   }
 
-  // Навигация (десктоп)
+
   &__nav {
     display: none;
 
@@ -132,10 +132,6 @@
     margin: 0;
     padding: 0;
     gap: 30px;
-  }
-
-  &__nav-item {
-    // стили для пунктов меню
   }
 
   &__nav-link {
