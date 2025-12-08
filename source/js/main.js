@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // },
       slideWidth: 290,
 
-      loop: false,
+      loop: true,
 
     });
   }
