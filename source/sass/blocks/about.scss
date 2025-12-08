@@ -1,0 +1,62 @@
+.about {
+  display: block;
+  margin: 0 auto;
+}
+
+.about__container {
+  padding: 0;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 25px;
+}
+
+.about__container-background {
+  display: block;
+  margin-left: -15px;
+}
+
+.about__container-shadow {
+  position: relative;
+  display: block;
+  padding: 0;
+}
+
+.about__container-shadow::before {
+  content: "О нас";
+  top: 0;
+  left: 0;
+}
+
+.about__container-title {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 17px;
+}
+
+.about__list-item {
+  padding-top: 24px;
+}
+
+.about__history-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.about__list-item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+.about__history-description {
+  padding-top: 15px;
+}

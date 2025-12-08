@@ -144,8 +144,9 @@
       </section>
       <section class="tours">
         <div class="tours__container" data-test="tours">
-          <h2 class="tours__title">Ближайшие туры</h2>
-
+          <div class="tours__container-shadow shadow-text">
+            <h2 class="tours__title">Ближайшие туры</h2>
+          </div>
           <div class="tours__slider-wrapper swiper">
 
             <div class="tours__nav">
@@ -311,7 +312,7 @@
 
       <section class="training">
         <div class="training__container" data-test="training">
-          <div class="training__container-shadow">
+          <div class="training__container-shadow shadow-text">
             <h2 class="training__title">Обучение</h2>
           </div>
           <p class="training__description">Обучение проводится квалифицированными специалистами, за плечами которых
@@ -319,117 +320,151 @@
 
           <div class="training__wrapper">
             <h2 class="training__wrapper-title training__title">Наши инструкторы</h2>
-            <ul class="training__wrapper-list">
-              <li class="training__wrapper-item">
-                <div class="training__instructor-card">
-                  <picture>
-                    <source type="image/webp" srcset="img/images-instructors/instructor-1@1x.webp 1x, img/images-instructors/instructor-1@2x.webp 2x" width="260" height="200">
-                    <source type="image/jpeg" srcset="img/images-instructors/instructor-1@1x.jpg 1x, img/images-instructors/instructor-1@2x.jpg 2x" width="260" height="200">
-                    <img class="instructor-card__photo" src="../img/images-instructors/instructor-1@1x.jpg" alt="Александр Прокофьев, инструктор по туризму" width="260" height="200" loading="lazy">
-                  </picture>
 
-                  <h3 class="training__instructor-name">
-                    <span>Александр <br>Прокофьев</span>
-                    <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
-                  </h3>
+            <div class="training__slider swiper">
+              <ul class="training__wrapper-list training__wrapper-swiper swiper-wrapper">
+                <li class="training__wrapper-item training__wrapper-slide swiper-slide">
+                  <div class="training__instructor-card">
+                    <picture>
+                      <source type="image/webp" srcset="img/images-instructors/instructor-1@1x.webp 1x, img/images-instructors/instructor-1@2x.webp 2x" width="260" height="200">
+                      <source type="image/jpeg" srcset="img/images-instructors/instructor-1@1x.jpg 1x, img/images-instructors/instructor-1@2x.jpg 2x" width="260" height="200">
+                      <img class="instructor-card__photo" src="../img/images-instructors/instructor-1@2x.jpg" alt="Александр Прокофьев, инструктор по туризму" width="260" height="200" loading="lazy">
+                    </picture>
 
-                  <p class="training__instructor-description">Строгий и внимательный инструктор, весёлый и общительный
-                    человек. Любит природу.</p>
-                </div>
-              </li>
+                    <h3 class="training__instructor-name">
+                      <span>Александр <br>Прокофьев</span>
+                      <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
+                    </h3>
 
-              <li class="training__wrapper-item">
-                <div class="training__instructor-card">
-                  <picture>
-                    <source type="image/webp" srcset="img/images-instructors/instructor-2@1x.webp 1x, img/images-instructors/instructor-2@2x.webp 2x" width="260" height="200">
-                    <source type="image/jpeg" srcset="img/images-instructors/instructor-2@1x.jpg 1x, img/images-instructors/instructor-2@2x.jpg 2x" width="260" height="200">
-                    <img class="instructor-card__photo" src="img/images-instructors/instructor-2@2x.jpg" alt="Светлана Афиногенова, инструктор по туризму" width="260" height="200" loading="lazy">
-                  </picture>
-
-                  <h3 class="training__instructor-name">
-                    <span>Светлана <br>Афиногенова</span>
-                    <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
-                  </h3>
-
-                  <p class="training__instructor-description">Видеть мир вокруг, познавать его опасности, находить друг
-                    друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
-                </div>
-              </li>
-              <li class="training__wrapper-item">
-                <div class="training__instructor-card">
-                  <picture>
-                    <source type="image/webp" srcset="img/images-instructors/instructor-3@1x.webp 1x, img/images-instructors/instructor-3@2x.webp 2x" width="260" height="200">
-                    <source type="image/jpeg" srcset="img/images-instructors/instructor-3@1x.jpg 1x, img/images-instructors/instructor-3@2x.jpg 2x" width="260" height="200">
-                    <img class="instructor-card__photo" src="img/images-instructors/instructor-3@2x.jpg" alt="Надежда Колесниченко, инструктор по туризму" width="260" height="200" loading="lazy">
-                  </picture>
-
-                  <h3 class="training__instructor-name">
-                    <span>Надежда <br>Колесниченко</span>
-                    <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
-                  </h3>
-
-                  <p class="training__instructor-description">Участники говорят, что Надежда ответственная, приятная в
-                    общении, и&nbsp;в&nbsp;поездках с ней чувствуешь себя спокойно и уверенно.</p>
-                </div>
-              </li>
-              <li class="training__wrapper-item">
-                <div class="training__instructor-card">
-                  <picture>
-                    <source type="image/webp" srcset="img/images-instructors/instructor-4@1x.webp 1x, img/images-instructors/instructor-4@2x.webp 2x" width="260" height="200">
-                    <source type="image/jpeg" srcset="img/images-instructors/instructor-4@1x.jpg 1x, img/images-instructors/instructor-4@2x.jpg 2x" width="260" height="200">
-                    <img class="instructor-card__photo" src="img/images-instructors/instructor-4@2x.jpg" alt="Федор Кайгородов, инструктор по туризму" width="260" height="200" loading="lazy">
-                  </picture>
-
-                  <h3 class="training__instructor-name">
-                    <span>Федор <br>Кайгородов</span>
-                    <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
-                  </h3>
-
-                  <p class="training__instructor-description">Опыт походов: Ходит в походы с 2001 года. В России побывал
-                    в горных районах Хибины, Архыз, много путешествует по Европе.</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div class="training__process">
-            <h3 class="training__process-title">Процесс обучения</h3>
-            <div class="training__process-line">
-
-              <ul class="training__process-list">
-
-                <li class="training__process-item">
-                  <div class="training__item-content">
-                    <p class="training__item-description training__description-first">Изучение спортивного туристского движения</p>
+                    <p class="training__instructor-description">Строгий и внимательный инструктор, весёлый и общительный
+                      человек. Любит природу.</p>
                   </div>
                 </li>
 
-                <li class="training__process-item">
-                  <div class="training__item-content">
-                    <p class="training__item-description training__description-second">Подготовка и техническое снаряжение в походах</p>
+                <li class="training__wrapper-item training__wrapper-slide swiper-slide">
+                  <div class="training__instructor-card">
+                    <picture>
+                      <source type="image/webp" srcset="img/images-instructors/instructor-2@1x.webp 1x, img/images-instructors/instructor-2@2x.webp 2x" width="260" height="200">
+                      <source type="image/jpeg" srcset="img/images-instructors/instructor-2@1x.jpg 1x, img/images-instructors/instructor-2@2x.jpg 2x" width="260" height="200">
+                      <img class="instructor-card__photo" src="img/images-instructors/instructor-2@2x.jpg" alt="Светлана Афиногенова, инструктор по туризму" width="260" height="200" loading="lazy">
+                    </picture>
+
+                    <h3 class="training__instructor-name">
+                      <span>Светлана <br>Афиногенова</span>
+                      <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
+                    </h3>
+
+                    <p class="training__instructor-description">Видеть мир вокруг, познавать его опасности, находить друг
+                      друга, становиться ближе, чувствовать — в этом назначение жизни.</p>
                   </div>
                 </li>
+                <li class="training__wrapper-item training__wrapper-slide swiper-slide">
+                  <div class="training__instructor-card">
+                    <picture>
+                      <source type="image/webp" srcset="img/images-instructors/instructor-3@1x.webp 1x, img/images-instructors/instructor-3@2x.webp 2x" width="260" height="200">
+                      <source type="image/jpeg" srcset="img/images-instructors/instructor-3@1x.jpg 1x, img/images-instructors/instructor-3@2x.jpg 2x" width="260" height="200">
+                      <img class="instructor-card__photo" src="img/images-instructors/instructor-3@2x.jpg" alt="Надежда Колесниченко, инструктор по туризму" width="260" height="200" loading="lazy">
+                    </picture>
 
-                <li class="training__process-item">
-                  <div class="training__item-content">
-                    <p class="training__item-description training__description-third">Лекции по окружающей среде, экологии и гигиене</p>
+                    <h3 class="training__instructor-name">
+                      <span>Надежда <br>Колесниченко</span>
+                      <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
+                    </h3>
+
+                    <p class="training__instructor-description">Участники говорят, что Надежда ответственная, приятная в
+                      общении, и&nbsp;в&nbsp;поездках с ней чувствуешь себя спокойно и уверенно.</p>
                   </div>
                 </li>
+                <li class="training__wrapper-item training__wrapper-slide swiper-slide">
+                  <div class="training__instructor-card">
+                    <picture>
+                      <source type="image/webp" srcset="img/images-instructors/instructor-4@1x.webp 1x, img/images-instructors/instructor-4@2x.webp 2x" width="260" height="200">
+                      <source type="image/jpeg" srcset="img/images-instructors/instructor-4@1x.jpg 1x, img/images-instructors/instructor-4@2x.jpg 2x" width="260" height="200">
+                      <img class="instructor-card__photo" src="img/images-instructors/instructor-4@2x.jpg" alt="Федор Кайгородов, инструктор по туризму" width="260" height="200" loading="lazy">
+                    </picture>
 
-                <li class="training__process-item">
-                  <div class="training__item-content">
-                    <p class="training__item-description training__description-fours">Разъяснение сложности горных препятствий</p>
+                    <h3 class="training__instructor-name">
+                      <span>Федор <br>Кайгородов</span>
+                      <a class="training__instructor-social" href="#" aria-label="Профиль ВКонтакте"></a>
+                    </h3>
+
+                    <p class="training__instructor-description">Опыт походов: Ходит в походы с 2001 года. В России побывал
+                      в горных районах Хибины, Архыз, много путешествует по Европе.</p>
                   </div>
                 </li>
-
               </ul>
+            </div>
+
+            <div class="training__process">
+              <h3 class="training__process-title">Процесс обучения</h3>
+              <div class="training__process-line">
+
+                <ul class="training__process-list">
+
+                  <li class="training__process-item">
+                    <div class="training__item-content">
+                      <p class="training__item-description training__description-first">Изучение спортивного туристского движения</p>
+                    </div>
+                  </li>
+
+                  <li class="training__process-item">
+                    <div class="training__item-content">
+                      <p class="training__item-description training__description-second">Подготовка и техническое снаряжение в походах</p>
+                    </div>
+                  </li>
+
+                  <li class="training__process-item">
+                    <div class="training__item-content">
+                      <p class="training__item-description training__description-third">Лекции по окружающей среде, экологии и гигиене</p>
+                    </div>
+                  </li>
+
+                  <li class="training__process-item">
+                    <div class="training__item-content">
+                      <p class="training__item-description training__description-fours">Разъяснение сложности горных препятствий</p>
+                    </div>
+                  </li>
+
+                </ul>
+                <div class="training__button-next swiper-button-next"></div>
+                <div class="training__button-prev swiper-button-prev"></div>
+              </div>
             </div>
           </div>
 
         </div>
       </section>
 
-      <div data-test="about">about</div>
+      <section class="about">
+        <div class="about__container" data-test="about">
+
+          <div class="about__container-background">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/images-about/about-background-desktop@1x.webp 1x, img/images-about/about-background-desktop@2x.webp 2x" width="660" height="498">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/images-about/about-background-tablet@1x.webp 1x, img/images-about/about-background-tablet@2x.webp 2x" width="542" height="350">
+              <source type="image/webp" srcset="img/images-about/about-background-mobile@1x.webp 1x, img/images-about/about-background-mobile@2x.webp 2x" width="320" height="568">
+              <source type="image/jpeg" media="(min-width: 1440px)" srcset="img/images-about/about-background-desktop@1x.png 1x, img/images-about/about-background-desktop@2x.png 2x" width="660" height="498">
+              <source type="image/jpeg" media="(min-width: 768px)" srcset="img/images-about/about-background-tablet@1x.png 1x, img/images-about/about-background-tablet@2x.png 2x" width="542" height="350">
+              <img class="about__background-img" src="img/images-about/about-background-mobile@2x.png" width="434" height="400" alt="Туристы с рюкзаками идут по горе, на их фоне видно озеро которое находится у подножия горы, они в термоодежде с лыжными палками, и с головным убором">
+            </picture>
+          </div>
+
+          <div class="about__container-shadow shadow-text">
+            <h2 class="about__container-title">О нас</h2>
+          </div>
+          <ul class="about__container-list">
+            <li class="about__list-item">
+              <h3 class="about__history-title">История компании</h3>
+              <p class="about__history-description">В далёком 2000 году мы начали заниматься туризмом — походы, поездки, восхождения, нам это настолько понравилось, что мы этим стали жить. Спустя 5 лет, в 2005 году мы основали компанию, чтобы показывать людям удивительные места нашей страны.</p>
+            </li>
+            <li class="about__list-item">
+              <h3 class="about__history-title">Наша цель</h3>
+              <p class="about__history-description">Подарить вам незабываемые впечатления от похода в горы. Мы берём на себя все организационные вопросы. При организации мы обязательно учтём все ваши пожелания. Вам останется только наслаждаться незабываемым приключением в приятной компании.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <div data-test="reviews">reviews</div>
       <div data-test="adv">adv</div>
       <div data-test="gallery">gallery</div>

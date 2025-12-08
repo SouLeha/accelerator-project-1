@@ -1,8 +1,42 @@
 .tours__container {
+  position: relative;
   margin: 0;
   padding: 0;
   margin-top: 20px;
   padding-bottom: 20px;
+}
+
+.tours__container::before {
+  content: "";
+  position: absolute;
+  display: block;
+  right: -205px;
+  bottom: -10px;
+  background-image:
+    image-set(
+      url("../../img/images-instructors/background-mobile-training@1x.webp") type("image/webp") 1x,
+      url("../../img/images-instructors/background-mobile-training@2x.webp") type("image/webp") 2x,
+      url("../../img/images-instructors/background-mobile-training@1x.png") type("image/png") 1x,
+      url("../../img/images-instructors/background-mobile-training@2x.png") type("image/png") 2x
+    );
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 346px;
+  height: 595px;
+  margin: 0;
+  z-index: -1;
+}
+
+.tours__container-shadow {
+  position: relative;
+  display: inline-block;
+}
+
+.tours__container-shadow::before {
+  content: "Ближайшие туры";
+  top: 4px;
+  left: 15px;
+
 }
 
 .tours__nav {
@@ -75,8 +109,9 @@
   margin: 0;
   padding: 0;
   text-align: start;
-  margin-top: 36px;
-  margin-bottom: 38px;
+  margin-bottom: 21px;
+  padding-top: 16px;
+  padding-bottom: 17px;
   padding-left: 15px;
   font-weight: 800;
   font-size: 22px;

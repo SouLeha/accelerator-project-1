@@ -42,3 +42,32 @@ if (toursSlider) {
   });
 
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const trainingSlider = document.querySelector('.training__slider');
+
+  if (trainingSlider) {
+    new Swiper(trainingSlider, {
+      modules: [Navigation],
+      slidesPerView: 1, // 1 слайд на мобильных
+
+      centeredSlides: true,
+      initialSlide: 2, // Начинаем с третьей карточки
+
+
+      // Навигация
+      navigation: false,
+
+      // {
+      //   nextEl: '.training__button-next',
+      //   prevEl: '.training__button-prev',
+      // },
+      slideWidth: 290,
+
+      loop: false,
+
+    });
+  }
+});
+

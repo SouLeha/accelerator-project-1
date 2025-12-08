@@ -2,12 +2,12 @@
   display: block;
   margin: 0 auto;
   color: $primary;
+  padding-bottom: 20px;
 }
 
 .training__container {
   margin: 0 15px;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  padding-top: 20px;
 }
 
 .training__container-shadow {
@@ -15,70 +15,38 @@
   display: inline-block;
 }
 
-.training__title {
+/* Основной контейнер Swiper */
+.training__slider {
+  width: 100%;
+  margin-top: 22px;
   position: relative;
-  z-index: 1;
-  text-align: start;
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 0;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  overflow: hidden;
 }
 
-.training__container-shadow::before {
-  content: "Обучение";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0.03;
-  font-weight: 800;
-  font-size: 26px;
-  line-height: 26px;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-.training__description {
-  margin: 0;
-  font-size: 14px;
-  line-height: 20px;
-  padding-top: 18px;
-}
-
-.training__wrapper {
-  margin-top: 28px;
-}
-
-.training__wrapper-title {
-  margin: 0;
-  padding: 0;
-}
-
+/* Контейнер для слайдов */
 .training__wrapper-list {
   display: flex;
-  flex-wrap: wrap;
+  list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 22px;
-  list-style: none;
+  width: 100%;
+  height: 100%;
 }
 
-.training__wrapper-item:not(:nth-child(3)) {
-  @media (width <= 768px) {
-    display: none;
-  }
-}
 
 .training__wrapper-item {
+  flex-shrink: 0;
+  width: 290px;
+  height: auto;
   margin: 0;
   border: 1px solid rgba($primary, 0.1);
 }
 
+/* Контент внутри слайда */
 .training__instructor-card {
   padding: 15px;
+  width: 290px;
+  box-sizing: border-box;
 }
 
 .training__instructor-card img {
@@ -87,6 +55,7 @@
   width: 260px;
   height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 .training__instructor-name {
@@ -96,9 +65,9 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  min-width: 260px;
   margin: 0;
   margin-top: 16px;
+  width: 260px;
 }
 
 .training__instructor-name span {
@@ -113,20 +82,6 @@
   flex-shrink: 0;
 
   border: 1px solid rgba($primary, 0.3);
-
-  &:hover {
-    opacity: 0.4;
-  }
-
-  &:active {
-    opacity: 0.8;
-  }
-
-  &:focus {
-    outline: 1px solid $primary;
-    outline-offset: 1px;
-    opacity: 1;
-  }
 }
 
 .training__instructor-social::after {
@@ -153,6 +108,47 @@
   line-height: 16px;
   margin: 0;
   margin-top: 15px;
+  width: 260px;
+}
+
+.training__title {
+  position: relative;
+  z-index: 1;
+  text-align: start;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.training__container-shadow::before {
+  content: "Обучение";
+  top: 0;
+  left: 0;
+}
+
+.training__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  padding-top: 18px;
+}
+
+.training__wrapper {
+  width: 290px;
+  margin-top: 28px;
+}
+
+.training__wrapper-title {
+  margin: 0;
+  padding: 0;
+}
+
+.training__button-next,
+.training__button-prev {
+  display: none;
 }
 
 // ---------------- Процесс обучения--------------
